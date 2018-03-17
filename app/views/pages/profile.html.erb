@@ -20,11 +20,14 @@
 <!-- Posts  -->
 
 	<div class="col-6">
+		<%= render '/components/post_form' %>
+		<% for @p in @posts %>
 		<div class="card w-75">
 			<div class="card-body">
-				<p>Posts</p>
+				<p><%= @p.content %></p>
 			</div>
 		</div>
+		<% end %>
 	</div>
 
 <!--  Recomandations	-->
@@ -35,13 +38,6 @@
 				<p>Recomandations</p>
 			</div>
 		</div>
-	</div>
-</div>
-
-<!-- Trends. Separate div with row class so it shows under the stats div -->
-
-<div class="row">
-	<div class="col-3 offset-9">
 		<div class="card w-75">
 			<div class="card-body">
 				<p>Trends</p>
